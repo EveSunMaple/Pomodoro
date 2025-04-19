@@ -11,7 +11,7 @@ let tray;
 const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 400,
-    height: 600,
+    height: 640,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,

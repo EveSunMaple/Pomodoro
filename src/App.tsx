@@ -92,7 +92,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-indigo-500 to-purple-600 rounded-lg overflow-hidden">
-      <div className="flex justify-between items-center p-4 bg-black/20 backdrop-blur-sm">
+      <div className="flex justify-between items-center p-4 bg-black/20 backdrop-blur-sm" style={{ WebkitAppRegion: 'drag' } as React.CSSProperties}>
         <div className="flex items-center">
           <Timer className="w-5 h-5 text-white mr-2" />
           <span className="text-white font-semibold">Pomodoro Timer</span>
@@ -100,13 +100,13 @@ function App() {
         <div className="flex space-x-2">
           <button
             onClick={minimizeWindow}
-            className="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
+            className="p-1.5 hover:bg-white/10 rounded-lg transition-colors" style={{ WebkitAppRegion: 'no-drag' } as React.CSSProperties}
           >
             <Minus className="w-4 h-4 text-white" />
           </button>
           <button
             onClick={closeWindow}
-            className="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
+            className="p-1.5 hover:bg-white/10 rounded-lg transition-colors" style={{ WebkitAppRegion: 'no-drag' } as React.CSSProperties}
           >
             <Close className="w-4 h-4 text-white" />
           </button>
